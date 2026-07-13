@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Strategy | Amaresh Konchada</title>
+  <meta name="description" content="Amaresh Konchada's tech strategy, grounded in the AWS Well-Architected Framework's five pillars: Cost Optimization, Reliability, Operational Excellence, Performance Efficiency, and Security.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tech Strategy | Amaresh Konchada">
+  <meta property="og:description" content="The AWS Well-Architected Framework's five pillars, applied: Cost Optimization, Reliability, Operational Excellence, Performance Efficiency, Security.">
+  <meta property="og:type" content="website">
+  <!-- TODO: add og:url and <link rel="canonical"> once the GitHub Pages / custom domain URL is finalized -->
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Icon sprite: referenced via <use> in the nav, diagram, pillar cards, and footer -->
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></g></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.5" y1="4.5" x2="6.2" y2="6.2"/><line x1="17.8" y1="17.8" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.2" y2="17.8"/><line x1="17.8" y1="6.2" x2="19.5" y2="4.5"/></g></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.55 6.29a.5.5 0 0 0 .5 0L19.8 6H4.2zM20 7.62l-6.77 5.64a2.5 2.5 0 0 1-3.2 0L4 7.62V18h16V7.62z"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.5v-1.94c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.41.21 2.45.1 2.71.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .28.18.61.69.5A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/></symbol>
+    <symbol id="icon-cost" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 6.5v11M9.2 9.3c0-1.2 1.1-2.1 2.8-2.1s2.8.8 2.8 1.9c0 1.2-1.1 1.7-2.8 2.1-1.7.4-2.8.9-2.8 2.1 0 1.1 1.1 1.9 2.8 1.9s2.8-.9 2.8-2.1"/>
+      </g>
+    </symbol>
+    <symbol id="icon-reliability" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 12a7.5 7.5 0 0 1 12.8-5.3L20 9"/>
+        <path d="M20 4.5V9h-4.5"/>
+        <path d="M19.5 12a7.5 7.5 0 0 1-12.8 5.3L4 15"/>
+        <path d="M4 19.5V15h4.5"/>
+      </g>
+    </symbol>
+    <symbol id="icon-operational-excellence" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <rect x="11" y="1" width="2" height="4" rx="1"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(45 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(90 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(135 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(180 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(225 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(270 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(315 12 12)"/>
+        <circle cx="12" cy="12" r="2.4"/>
+      </g>
+      <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-performance" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3c2.2 1.8 3.6 4.9 3.6 8 0 1.8-.5 3.2-1.3 4.5L12 18l-2.3-2.5C8.9 14.2 8.4 12.8 8.4 11c0-3.1 1.4-6.2 3.6-8z"/>
+        <circle cx="12" cy="10.5" r="1.4"/>
+        <path d="M9 15.5l-2 2.3M15 15.5l2 2.3M10.3 18.5l-.8 2.5M13.7 18.5l.8 2.5"/>
+      </g>
+    </symbol>
+    <symbol id="icon-security" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5.5" y="11" width="13" height="9" rx="2"/>
+        <path d="M8.5 11V7.5a3.5 3.5 0 0 1 7 0V11"/>
+        <line x1="12" y1="15" x2="12" y2="17.2"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="nav__brand">Amaresh Konchada</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li><a href="index.html#about" class="nav__link">About</a></li>
+          <li><a href="index.html#skills" class="nav__link">Skills</a></li>
+          <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+          <li><a href="index.html#experience" class="nav__link">Experience</a></li>
+          <li><a href="index.html#certifications" class="nav__link">Certifications</a></li>
+          <li><a href="index.html#blog" class="nav__link">Blog</a></li>
+          <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="resume/resume.html" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">Resume</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#icon-moon"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <header class="page-header">
+        <a href="index.html#blog" class="back-link">&larr; Back to Blog</a>
+        <h1 class="page-header__title">Tech Strategy</h1>
+        <p class="page-header__subtitle">
+          The AWS Well-Architected Framework provides proven principles to design and operate secure,
+          high-performing, resilient, and efficient cloud architectures. CROPS captures its five core pillars.
+        </p>
+      </header>
+
+      <nav class="framework-diagram" aria-label="Jump to a pillar">
+        <a href="#pillar-cost" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-cost"></use></svg></span>
+          <span class="framework-diagram__label">Cost Optimization</span>
+        </a>
+        <a href="#pillar-reliability" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-reliability"></use></svg></span>
+          <span class="framework-diagram__label">Reliability</span>
+        </a>
+        <a href="#pillar-operational-excellence" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-operational-excellence"></use></svg></span>
+          <span class="framework-diagram__label">Operational Excellence</span>
+        </a>
+        <a href="#pillar-performance" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-performance"></use></svg></span>
+          <span class="framework-diagram__label">Performance Efficiency</span>
+        </a>
+        <a href="#pillar-security" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-security"></use></svg></span>
+          <span class="framework-diagram__label">Security</span>
+        </a>
+      </nav>
+
+      <section class="pillars-grid" aria-label="The five pillars in detail">
+
+        <article class="card pillar-card" id="pillar-cost">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-cost"></use></svg></div>
+          <p class="pillar-card__eyebrow">Pillar 1</p>
+          <h2 class="pillar-card__title">Cost Optimization</h2>
+          <p class="pillar-card__summary">Design architectures that deliver business value at the lowest possible cost.</p>
+          <ul class="pillar-card__list">
+            <li>Pay only for what you use with consumption-based pricing</li>
+            <li>Continuously measure, monitor, and optimize spend</li>
+            <li>Use managed services and right-size resources</li>
+            <li>Optimize over time as usage patterns evolve</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="pillar-reliability">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-reliability"></use></svg></div>
+          <p class="pillar-card__eyebrow">Pillar 2</p>
+          <h2 class="pillar-card__title">Reliability</h2>
+          <p class="pillar-card__summary">Ensure workloads consistently perform their intended functions.</p>
+          <ul class="pillar-card__list">
+            <li>Design for failure using fault isolation and redundancy</li>
+            <li>Automatically recover from failures</li>
+            <li>Scale horizontally to handle demand changes</li>
+            <li>Continuously test resilience through chaos and recovery testing</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="pillar-operational-excellence">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-operational-excellence"></use></svg></div>
+          <p class="pillar-card__eyebrow">Pillar 3</p>
+          <h2 class="pillar-card__title">Operational Excellence</h2>
+          <p class="pillar-card__summary">Run and monitor systems effectively while continuously improving processes.</p>
+          <ul class="pillar-card__list">
+            <li>Automate operations and infrastructure changes</li>
+            <li>Use metrics, logs, and alarms for observability</li>
+            <li>Make small, reversible changes</li>
+            <li>Learn from failures and operational events</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="pillar-performance">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-performance"></use></svg></div>
+          <p class="pillar-card__eyebrow">Pillar 4</p>
+          <h2 class="pillar-card__title">Performance Efficiency</h2>
+          <p class="pillar-card__summary">Use computing resources efficiently to meet system requirements.</p>
+          <ul class="pillar-card__list">
+            <li>Select the right resource types for workloads</li>
+            <li>Adopt serverless and managed services where possible</li>
+            <li>Continuously evaluate and evolve architectures</li>
+            <li>Leverage caching, parallelism, and asynchronous processing</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="pillar-security">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-security"></use></svg></div>
+          <p class="pillar-card__eyebrow">Pillar 5</p>
+          <h2 class="pillar-card__title">Security</h2>
+          <p class="pillar-card__summary">Protect data, systems, and assets while delivering business value.</p>
+          <ul class="pillar-card__list">
+            <li>Implement strong identity and access management</li>
+            <li>Apply defense-in-depth security controls</li>
+            <li>Encrypt data in transit and at rest</li>
+            <li>Automate security best practices and continuous monitoring</li>
+          </ul>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <p class="site-footer__name">Amaresh Konchada</p>
+        <p class="site-footer__tagline">Data &amp; AI Leader · Cloud Strategy &amp; Enterprise AI</p>
+      </div>
+
+      <ul class="site-footer__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <ul class="hero__socials site-footer__socials" aria-label="Social links">
+        <li>
+          <a href="https://www.linkedin.com/in/amaresh-k-6640181b/" target="_blank" rel="noopener noreferrer" aria-label="Amaresh Konchada on LinkedIn">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/amareshsubudhi" target="_blank" rel="noopener noreferrer" aria-label="Amaresh Konchada on GitHub">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-github"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:amareshsubudhi@gmail.com" aria-label="Email Amaresh Konchada">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-mail"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p class="site-footer__copy">© <span id="year">2026</span> Amaresh Konchada. Built with HTML, CSS &amp; JavaScript · Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

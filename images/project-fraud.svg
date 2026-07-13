@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220" role="img" aria-label="Real-Time Fraud Detection Platform">
+  <defs>
+    <linearGradient id="fraudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#111c3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#fraudGradient)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M200 46c22 10 44 14 66 14v46c0 40-28 66-66 82-38-16-66-42-66-82V60c22 0 44-4 66-14z"/>
+    <path d="M172 116l20 20 38-42"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.35" stroke-width="2" fill="none">
+    <polyline points="40,190 70,170 100,182 130,150 160,178"/>
+    <polyline points="240,178 270,150 300,182 330,170 360,190"/>
+  </g>
+</svg>

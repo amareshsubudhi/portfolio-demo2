@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220" role="img" aria-label="Generative AI Enterprise Assistant">
+  <defs>
+    <linearGradient id="genaiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b6df0"/>
+      <stop offset="100%" stop-color="#101534"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#genaiGradient)"/>
+  <rect x="130" y="60" width="140" height="90" rx="16" fill="#ffffff" fill-opacity="0.95"/>
+  <path d="M170 150l-14 24 34-24" fill="#ffffff" fill-opacity="0.95"/>
+  <g fill="#1d4ed8">
+    <circle cx="168" cy="105" r="6"/>
+    <circle cx="200" cy="105" r="6"/>
+    <circle cx="232" cy="105" r="6"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.85">
+    <path d="M60 60l6 16 16 6-16 6-6 16-6-16-16-6 16-6z"/>
+    <path d="M330 130l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/>
+  </g>
+</svg>

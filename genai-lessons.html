@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Lessons From Scaling Generative AI in the Enterprise | Amaresh Konchada</title>
+  <meta name="description" content="Amaresh Konchada on what actually determines whether an enterprise generative AI program succeeds — from scoping the first use case to why retrieval quality matters more than model choice.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="5 Lessons From Scaling Generative AI in the Enterprise | Amaresh Konchada">
+  <meta property="og:description" content="What actually determines whether an enterprise GenAI program succeeds.">
+  <meta property="og:type" content="article">
+  <!-- TODO: add og:url and <link rel="canonical"> once the GitHub Pages / custom domain URL is finalized -->
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></g></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.5" y1="4.5" x2="6.2" y2="6.2"/><line x1="17.8" y1="17.8" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.2" y2="17.8"/><line x1="17.8" y1="6.2" x2="19.5" y2="4.5"/></g></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.55 6.29a.5.5 0 0 0 .5 0L19.8 6H4.2zM20 7.62l-6.77 5.64a2.5 2.5 0 0 1-3.2 0L4 7.62V18h16V7.62z"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.5v-1.94c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.41.21 2.45.1 2.71.65.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .28.18.61.69.5A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/></symbol>
+
+    <symbol id="icon-target" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="4.5"/>
+        <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/>
+      </g>
+    </symbol>
+    <symbol id="icon-shield-lock" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3l7 3v5.5c0 4.5-3 7.7-7 9.5-4-1.8-7-5-7-9.5V6z"/>
+        <rect x="9" y="11" width="6" height="4.5" rx="1"/>
+        <path d="M10 11V9.5a2 2 0 0 1 4 0V11"/>
+      </g>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="10.5" cy="10.5" r="6.5"/>
+        <line x1="15.3" y1="15.3" x2="20.5" y2="20.5"/>
+      </g>
+    </symbol>
+    <symbol id="icon-people-arrow" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="8" cy="7.5" r="3"/>
+        <path d="M2.8 19a5.2 5.2 0 0 1 10.4 0"/>
+        <path d="M16 8l4 4-4 4M20 12h-8"/>
+      </g>
+    </symbol>
+    <symbol id="icon-chart-up" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.5 20.5h17"/>
+        <path d="M4.5 17l5-6 4 3.5L20 6"/>
+        <path d="M14.5 6H20v5.5"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="nav__brand">Amaresh Konchada</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li><a href="index.html#about" class="nav__link">About</a></li>
+          <li><a href="index.html#skills" class="nav__link">Skills</a></li>
+          <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+          <li><a href="index.html#experience" class="nav__link">Experience</a></li>
+          <li><a href="index.html#certifications" class="nav__link">Certifications</a></li>
+          <li><a href="index.html#blog" class="nav__link">Blog</a></li>
+          <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="resume/resume.html" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">Resume</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#icon-moon"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <header class="page-header">
+        <a href="index.html#blog" class="back-link">&larr; Back to Blog</a>
+        <h1 class="page-header__title">5 Lessons From Scaling Generative AI in the Enterprise</h1>
+        <p class="page-header__subtitle">
+          Sponsoring and co-architecting an enterprise-wide generative AI assistant taught me that
+          the hardest problems in GenAI adoption are rarely about the model. Here's what actually
+          determined whether the program succeeded.
+        </p>
+      </header>
+
+      <nav class="framework-diagram" aria-label="Jump to a lesson">
+        <a href="#lesson-scope" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg></span>
+          <span class="framework-diagram__label">Narrow Use Case</span>
+        </a>
+        <a href="#lesson-governance" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-shield-lock"></use></svg></span>
+          <span class="framework-diagram__label">Governance</span>
+        </a>
+        <a href="#lesson-retrieval" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg></span>
+          <span class="framework-diagram__label">Retrieval Quality</span>
+        </a>
+        <a href="#lesson-change" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-people-arrow"></use></svg></span>
+          <span class="framework-diagram__label">Change Management</span>
+        </a>
+        <a href="#lesson-impact" class="framework-diagram__node">
+          <span class="framework-diagram__icon"><svg class="icon" aria-hidden="true"><use href="#icon-chart-up"></use></svg></span>
+          <span class="framework-diagram__label">Business Impact</span>
+        </a>
+      </nav>
+
+      <section class="pillars-grid" aria-label="The five lessons in detail">
+
+        <article class="card pillar-card" id="lesson-scope">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg></div>
+          <p class="pillar-card__eyebrow">Lesson 1</p>
+          <h2 class="pillar-card__title">Start With a Narrow, High-Value Use Case</h2>
+          <p class="pillar-card__summary">Resist the urge to build a general-purpose platform on day one.</p>
+          <ul class="pillar-card__list">
+            <li>Pick one workflow with clear, measurable pain — not "AI for everything"</li>
+            <li>A single well-adopted use case builds the credibility to fund the next ten</li>
+            <li>Narrow scope makes evaluation, governance, and rollout tractable</li>
+            <li>Platform capabilities should emerge from repeated use cases, not precede them</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="lesson-governance">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-shield-lock"></use></svg></div>
+          <p class="pillar-card__eyebrow">Lesson 2</p>
+          <h2 class="pillar-card__title">Governance and RBAC Are Part of the Architecture</h2>
+          <p class="pillar-card__summary">Retrofitting access control and data governance after launch is far more expensive than designing it in.</p>
+          <ul class="pillar-card__list">
+            <li>Document- and field-level permissions must flow through to retrieval results</li>
+            <li>Every response should be auditable back to its source documents</li>
+            <li>PII and sensitive data handling need sign-off before pilot, not after</li>
+            <li>Legal, security, and compliance are design partners, not final-mile reviewers</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="lesson-retrieval">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg></div>
+          <p class="pillar-card__eyebrow">Lesson 3</p>
+          <h2 class="pillar-card__title">Retrieval Quality Determines Adoption</h2>
+          <p class="pillar-card__summary">Users forgive an imperfect model far more readily than they forgive a wrong answer built on the wrong source.</p>
+          <ul class="pillar-card__list">
+            <li>Invest early in chunking strategy, metadata, and index freshness</li>
+            <li>Evaluate retrieval precision/recall separately from generation quality</li>
+            <li>Hybrid search (keyword + vector) consistently outperforms vector-only in practice</li>
+            <li>A better retriever usually beats a bigger model for enterprise knowledge tasks</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="lesson-change">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-people-arrow"></use></svg></div>
+          <p class="pillar-card__eyebrow">Lesson 4</p>
+          <h2 class="pillar-card__title">Change Management Wins or Loses the Rollout</h2>
+          <p class="pillar-card__summary">The best assistant in the world fails if nobody trusts it or knows how to use it well.</p>
+          <ul class="pillar-card__list">
+            <li>Champion networks inside business units drive adoption faster than top-down mandates</li>
+            <li>Train people on how to prompt and verify, not just how to log in</li>
+            <li>Publish known limitations openly — it builds trust rather than eroding it</li>
+            <li>Close the feedback loop visibly: show users their input changed the product</li>
+          </ul>
+        </article>
+
+        <article class="card pillar-card" id="lesson-impact">
+          <div class="pillar-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-chart-up"></use></svg></div>
+          <p class="pillar-card__eyebrow">Lesson 5</p>
+          <h2 class="pillar-card__title">Measure Business Impact, Not Model Metrics</h2>
+          <p class="pillar-card__summary">BLEU scores and latency dashboards don't win renewal conversations with the CFO.</p>
+          <ul class="pillar-card__list">
+            <li>Tie every use case to a business metric before it launches, not after</li>
+            <li>Track time saved, ticket deflection, and error reduction — not just usage counts</li>
+            <li>Report in the language of the business unit funding the work</li>
+            <li>Kill or rescope use cases that can't show impact within a quarter</li>
+          </ul>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <p class="site-footer__name">Amaresh Konchada</p>
+        <p class="site-footer__tagline">Data &amp; AI Leader · Cloud Strategy &amp; Enterprise AI</p>
+      </div>
+
+      <ul class="site-footer__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <ul class="hero__socials site-footer__socials" aria-label="Social links">
+        <li>
+          <a href="https://www.linkedin.com/in/amaresh-k-6640181b/" target="_blank" rel="noopener noreferrer" aria-label="Amaresh Konchada on LinkedIn">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/amareshsubudhi" target="_blank" rel="noopener noreferrer" aria-label="Amaresh Konchada on GitHub">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-github"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:amareshsubudhi@gmail.com" aria-label="Email Amaresh Konchada">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-mail"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p class="site-footer__copy">© <span id="year">2026</span> Amaresh Konchada. Built with HTML, CSS &amp; JavaScript · Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

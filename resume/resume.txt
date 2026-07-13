@@ -1,0 +1,56 @@
+AMARESH KONCHADA
+Data & AI Leader | Cloud Strategy & Enterprise AI
+amareshsubudhi@gmail.com | linkedin.com/in/amaresh-k-6640181b | github.com/amareshsubudhi
+
+SUMMARY
+Data & AI leader with 18+ years of experience helping enterprises turn fragmented data
+into competitive advantage. Proven track record building and scaling cloud data platforms,
+enterprise AI/ML capabilities, and high-performing engineering organizations across
+financial services, retail, and healthcare technology. Deep expertise across AWS, Azure,
+and GCP, generative AI and MLOps, and executive-level strategy and stakeholder management.
+
+CORE SKILLS
+Cloud & Data: AWS, Azure, GCP, Snowflake, Databricks, Spark, Kafka, Terraform, dbt,
+Data Lakehouse Architecture
+AI / ML: Generative AI & LLMs, RAG, MLOps, TensorFlow, PyTorch, LangChain, Vector
+Databases, Responsible AI
+Leadership: Org Design & Hiring, Executive Stakeholder Management, AI/Data Strategy,
+P&L Ownership, Change Management
+
+EXPERIENCE
+
+VP, Data & AI | Global Financial Services Enterprise | 2021 - Present
+- Own enterprise data & AI strategy and roadmap for a $2B+ business unit, reporting to the CTO.
+- Built and scaled a 50+ person data engineering, ML engineering, and analytics organization.
+- Launched the company's first enterprise-wide generative AI program, moving from pilot to
+  production in under 9 months.
+- Reduced cloud infrastructure spend by 35% while improving platform reliability to 99.9% uptime.
+
+Director, Cloud & Data Engineering | Fortune 500 Retail & E-Commerce Company | 2017 - 2021
+- Led migration of legacy on-prem data warehouses to a cloud-native lakehouse architecture,
+  serving 200+ downstream teams.
+- Established the company's first formal data governance and MLOps practices.
+- Partnered with executive leadership to define a 3-year cloud and AI investment roadmap.
+
+Senior Manager, Data Platforms | Global Healthcare Technology Company | 2012 - 2017
+- Built real-time and batch data pipelines supporting clinical and operational analytics
+  for millions of patient records.
+- Grew and mentored a data engineering team from 4 to 20 engineers.
+- Introduced CI/CD and automated testing practices that cut release cycle time by 60%.
+
+Data Engineering Lead | Enterprise Software Company | 2008 - 2012
+- Designed and built ETL pipelines and reporting infrastructure supporting enterprise BI
+  for large B2B customers.
+- Established early data quality and monitoring frameworks still referenced years later.
+
+CERTIFICATIONS
+- AWS Certified Solutions Architect - Professional
+- AWS Certified Machine Learning - Specialty
+- Microsoft Certified: Azure Solutions Architect Expert
+- Google Cloud Professional Data Engineer
+- Databricks Certified Data Engineer Professional
+- Project Management Professional (PMP)
+
+EDUCATION
+- M.S., Computer Science - Data Science & Artificial Intelligence concentration (2008)
+- B.E., Computer Science (2006)
