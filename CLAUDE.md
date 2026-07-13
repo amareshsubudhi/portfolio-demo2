@@ -1,96 +1,176 @@
 # CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Project
 
 Professional Portfolio Website
 
-This repository contains my professional portfolio website hosted using GitHub Pages.
+A static, single-page professional portfolio hosted on GitHub Pages. Built with plain HTML5, CSS3, and vanilla JavaScript—no frameworks, no build step, no dependencies.
 
-The goal is to create a modern, elegant, responsive, high-performance static website that highlights my experience, projects, technical expertise, leadership, certifications, and achievements.
-
-The website should look professional enough to be shared with recruiters, customers, conference organizers, and potential employers.
+The goal is to create a modern, elegant, responsive, high-performance website that highlights professional experience, projects, technical expertise, leadership, certifications, and achievements. The site is designed to be shared with recruiters, hiring managers, customers, conference organizers, and the AI/Data Engineering community.
 
 ---
 
-# Target Audience
+# Development Commands
 
-- Recruiters
-- Hiring Managers
-- Customers
-- Conference Organizers
-- Students
-- Engineering Leaders
-- AI/Data Engineering Community
+```bash
+# Start local development server
+python3 -m http.server 8000
+# Then visit http://localhost:8000
+```
+
+No build step, no install needed. Direct file editing.
 
 ---
 
-# Design Goals
+# Actual Folder Structure
 
-The website should be:
-
-- Clean
-- Minimalistic
-- Modern
-- Premium
-- Easy to navigate
-- Mobile responsive
-- Fast loading
-- Accessible
-- SEO friendly
-
-Avoid flashy animations or clutter.
-
-Use whitespace effectively.
-
-Focus on readability.
+```
+Professional Website/
+├── index.html                 Main portfolio page (all sections)
+├── tech-strategy.html         Blog article: Well-Architected Framework
+├── genai-lessons.html         Blog article: Scaling GenAI in the enterprise
+├── styles/
+│   └── style.css              All site styles (light + dark mode support)
+├── scripts/
+│   └── main.js                Nav toggle, theme toggle, scroll-spy, contact form
+├── images/                    Avatar placeholder + project thumbnail SVGs
+├── assets/
+│   └── favicon.svg
+├── resume/
+│   ├── resume.html            Interactive resume HTML
+│   ├── resume.txt             ATS plain-text version
+│   ├── Amaresh_Konchada_Resume.pdf  Downloadable PDF resume
+│   └── README.md              Resume export instructions
+├── docs/
+│   └── DEPLOYMENT.md          GitHub Pages setup steps
+├── temp/                      Scratch notes (not deployed)
+└── CLAUDE.md
+```
 
 ---
 
 # Tech Stack
 
-Use only:
-
+**Use only:**
 - HTML5
-- CSS3
-- Vanilla JavaScript
+- CSS3 (custom properties, Flexbox, Grid)
+- Vanilla JavaScript (ES6, no dependencies)
+- Google Fonts (Inter)
 
-Do NOT use:
+**Do NOT use:**
+- React, Angular, Vue
+- Bootstrap, Tailwind, jQuery
+- Build tools, transpilers, bundlers
+- Frameworks of any kind
 
-- React
-- Angular
-- Vue
-- Bootstrap
-- Tailwind
-- jQuery
-
-The website must be completely static and compatible with GitHub Pages.
+The website must be completely static and GitHub Pages compatible—no build step.
 
 ---
 
-# Folder Structure
+# Key Files & Their Purpose
 
-/
-│
-├── index.html
-├── styles/
-│     style.css
-│
-├── scripts/
-│     main.js
-│
-├── images/
-│
-├── assets/
-│
-├── docs/
-│
-├── resume/
-│
-├── temp/
-│
-└── README.md
+**index.html**: Main portfolio page containing all sections (hero, about, skills, projects, experience timeline, certifications, education, achievements, blog links, contact, footer).
 
-Keep folders organized.
+**tech-strategy.html & genai-lessons.html**: Standalone blog articles linked from the Blog section. Each has its own styling and navigation back to the main site.
+
+**styles/style.css**: Single stylesheet for the entire site. Organized into sections (variables, global, layout, navigation, hero, cards, buttons, footer, media queries). Supports light and dark mode via `:root` and `[data-theme="dark"]` selectors.
+
+**scripts/main.js**: Lightweight utility functions—mobile nav toggle, theme toggle, scroll-spy highlighting, contact form handling. No DOM libraries.
+
+**resume/**: Keep `resume.html` and `resume.txt` in sync with the Experience/Certifications/Education sections in `index.html`. See `resume/README.md` for PDF export instructions.
+
+---
+
+# Content Management
+
+Everything is hand-authored HTML—no CMS or data files.
+
+**To add/edit:**
+- **Experience/Education**: Edit the `#experience` and `#education` sections in `index.html`. Content mirrors the real resume (`resume/Amaresh_Konchada_Resume.pdf`).
+- **Projects, Certifications, Achievements**: Copy/paste a `<article class="card ...">` block and update its text.
+- **Resume**: Keep `resume/resume.html`, `resume/resume.txt`, and `resume/Amaresh_Konchada_Resume.pdf` in sync with the main site.
+- **Colors/Theme**: Edit CSS custom properties at the top of `styles/style.css` (`:root` for light, `[data-theme="dark"]` for dark).
+- **Avatar**: The hero uses `images/profile.jpg` (square 560×560 headshot). Replace the file to change it.
+
+---
+
+# Design Goals
+
+The website must be:
+- Clean, minimalistic, modern, premium
+- Easy to navigate (smooth scroll to sections)
+- Mobile responsive (desktop, tablet, mobile)
+- Fast loading (Lighthouse >95 across all categories)
+- Accessible (semantic HTML, aria labels, keyboard nav, color contrast)
+- SEO friendly (title, meta description, Open Graph tags, canonical URLs)
+
+Avoid flashy animations, clutter, or excessive gradients. Use whitespace and typography hierarchy effectively.
+
+---
+
+# Responsiveness & Performance
+
+Use Flexbox and CSS Grid. Avoid fixed widths. Test on desktop, tablet, and mobile.
+
+Optimize images (compress before use, descriptive filenames). Lazy load images where appropriate.
+
+Target Lighthouse scores:
+- Performance >95
+- Accessibility >95
+- SEO >95
+- Best Practices >95
+
+---
+
+# CSS Organization
+
+Organize `style.css` into clear sections:
+1. Variables (colors, fonts, spacing)
+2. Global (reset, base elements)
+3. Layout
+4. Navigation
+5. Hero
+6. Cards
+7. Buttons
+8. Footer
+9. Media queries
+
+Use CSS variables for colors to support theme switching. Avoid inline CSS.
+
+---
+
+# JavaScript Standards
+
+Keep JavaScript lightweight. Use ES6 features. Separate DOM logic from utility functions. Avoid global variables.
+
+In `main.js`, keep functions small and focused:
+- Nav toggle for mobile
+- Theme toggle (light/dark)
+- Scroll-spy for active nav highlighting
+- Contact form handling
+
+---
+
+# Git Workflow
+
+Commit after each completed section with descriptive messages:
+- "Add hero section"
+- "Improve responsive navigation"
+- "Add certifications"
+- "Optimize images"
+- "Fix mobile layout"
+
+Avoid large commits. One feature per commit.
+
+---
+
+# Deployment
+
+See `docs/DEPLOYMENT.md` for step-by-step GitHub Pages setup.
+
+The site deploys directly from the repository root—no build step required.
 
 ---
 

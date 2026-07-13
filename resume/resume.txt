@@ -1,56 +1,112 @@
 AMARESH KONCHADA
-Data & AI Leader | Cloud Strategy & Enterprise AI
-amareshsubudhi@gmail.com | linkedin.com/in/amaresh-k-6640181b | github.com/amareshsubudhi
+Enterprise Solution Architect - Adobe Experience Platform (AEP, RTCDP, AJO)
+Austin, TX | amareshsubudhi@gmail.com | 512-806-8046 | linkedin.com/in/amaresh-k-6640181b
 
 SUMMARY
-Data & AI leader with 18+ years of experience helping enterprises turn fragmented data
-into competitive advantage. Proven track record building and scaling cloud data platforms,
-enterprise AI/ML capabilities, and high-performing engineering organizations across
-financial services, retail, and healthcare technology. Deep expertise across AWS, Azure,
-and GCP, generative AI and MLOps, and executive-level strategy and stakeholder management.
+Enterprise Solution Architecture and MarTech Transformation leader with 17 years of
+experience spanning Customer Data Platforms (CDPs), cloud architecture, and AI/ML-powered
+personalization for Fortune 500 enterprises. Deep, hands-on expertise across the full
+Adobe Experience Platform ecosystem - AEP, Real-Time CDP, Adobe Journey Optimizer (AJO),
+and Customer Journey Analytics (CJA) - spanning XDM schema design, real-time streaming
+data ingestion, and enterprise identity resolution at scale.
 
-CORE SKILLS
-Cloud & Data: AWS, Azure, GCP, Snowflake, Databricks, Spark, Kafka, Terraform, dbt,
-Data Lakehouse Architecture
-AI / ML: Generative AI & LLMs, RAG, MLOps, TensorFlow, PyTorch, LangChain, Vector
-Databases, Responsible AI
-Leadership: Org Design & Hiring, Executive Stakeholder Management, AI/Data Strategy,
-P&L Ownership, Change Management
+Proven track record leading architecture workshops, technical health checks, and
+executive-level engagements that translate complex customer requirements into
+production-grade, cross-product solutions. Adobe Certified Expert (RTCDP, AJO) with
+hands-on fluency in AI-assisted engineering - Claude, MCP server integrations, and
+agentic workflows - currently deepening this through a dedicated Forward Deployed
+Engineer training program.
 
-EXPERIENCE
+CORE COMPETENCIES
+- Enterprise Solution Architecture & Customer 360 / MarTech Transformation Leadership
+- Adobe Experience Platform (AEP), Real-Time CDP, Adobe Journey Optimizer (AJO),
+  Customer Journey Analytics (CJA)
+- XDM Schema Design, Identity Resolution & Identity Architecture, Real-Time Streaming
+  Data Ingestion
+- AI/ML-Driven Personalization & Recommendation Engines; Generative AI (LLMs, RAG,
+  AI Agents, MCP)
+- Data Governance & Privacy-Preserving Computation (Data Clean Rooms)
+- Omnichannel Journey Orchestration, Cross-Platform Activation & Regulated-Industry
+  (FSI) Delivery
+- Team Leadership, Stakeholder Collaboration & Executive Communication
 
-VP, Data & AI | Global Financial Services Enterprise | 2021 - Present
-- Own enterprise data & AI strategy and roadmap for a $2B+ business unit, reporting to the CTO.
-- Built and scaled a 50+ person data engineering, ML engineering, and analytics organization.
-- Launched the company's first enterprise-wide generative AI program, moving from pilot to
-  production in under 9 months.
-- Reduced cloud infrastructure spend by 35% while improving platform reliability to 99.9% uptime.
+PROFESSIONAL EXPERIENCE
 
-Director, Cloud & Data Engineering | Fortune 500 Retail & E-Commerce Company | 2017 - 2021
-- Led migration of legacy on-prem data warehouses to a cloud-native lakehouse architecture,
-  serving 200+ downstream teams.
-- Established the company's first formal data governance and MLOps practices.
-- Partnered with executive leadership to define a 3-year cloud and AI investment roadmap.
+Lead Engineer | Adobe - Austin, TX | April 2022 - Present
+- Serve as technical lead and trusted advisor across 10+ Premier enterprise accounts
+  spanning AEP, Real-Time CDP, Adobe Journey Optimizer (AJO), and Customer Journey
+  Analytics (CJA) - owning the technical relationship from architecture design through
+  go-live and expansion.
+- Architect enterprise-scale solutions spanning identity resolution, XDM schema design,
+  and real-time streaming data ingestion, translating complex customer requirements into
+  production-grade reference architectures.
+- Lead technical strategy sessions, architecture workshops, and platform health checks
+  for strategic accounts, troubleshooting production-level issues across data ingestion,
+  identity resolution, and audience activation.
+- Mentor engineering teams on AEP/CDP best practices and AI/ML-driven personalization;
+  collaborate cross-functionally with product, engineering, and systems-integrator
+  partner teams to deliver scalable MarTech solutions.
+- Build AI-assisted engineering workflows - including Model Context Protocol (MCP)
+  server integrations and reusable Node.js automation scripts on Claude Desktop - to
+  accelerate prototyping and modernize technical delivery.
 
-Senior Manager, Data Platforms | Global Healthcare Technology Company | 2012 - 2017
-- Built real-time and batch data pipelines supporting clinical and operational analytics
-  for millions of patient records.
-- Grew and mentored a data engineering team from 4 to 20 engineers.
-- Introduced CI/CD and automated testing practices that cut release cycle time by 60%.
+Director - Digital Solutions | Epsilon - Publicis Groupe - Austin, TX | May 2021 - April 2022
+- Led presales, solution architecture, and implementation for multiple enterprise
+  Customer Data Platform (CDP) programs.
+- Partnered with cross-departmental teams, stakeholders, and vendors to deliver
+  data-driven marketing transformation initiatives.
+- Managed a cross-functional team of 4 to deliver high-impact MarTech solutions for
+  enterprise clients.
 
-Data Engineering Lead | Enterprise Software Company | 2008 - 2012
-- Designed and built ETL pipelines and reporting infrastructure supporting enterprise BI
-  for large B2B customers.
-- Established early data quality and monitoring frameworks still referenced years later.
+Software Engineer III | Truist - Austin, TX | August 2020 - May 2021
+- Architected and built new capabilities within Adobe Experience Cloud in a regulated
+  financial-services environment, focused on CDP management and compliance-aware data
+  handling.
+- Managed end-to-end Adobe AEP/CDP implementation - enterprise data ingestion,
+  segmentation, and AI/ML personalization orchestration using Jupyter notebooks.
+- Ensured alignment between enterprise data architecture, security/compliance
+  requirements, and business objectives for scalable, audit-ready solutions.
 
-CERTIFICATIONS
-- AWS Certified Solutions Architect - Professional
-- AWS Certified Machine Learning - Specialty
-- Microsoft Certified: Azure Solutions Architect Expert
-- Google Cloud Professional Data Engineer
-- Databricks Certified Data Engineer Professional
-- Project Management Professional (PMP)
+Specialist Senior - Digital Analytics | Deloitte Consulting - McLean, VA | February 2019 - July 2020
+- Led presales, strategy, and implementation for Adobe Experience Cloud and CDP
+  solutions for enterprise clients.
+- Developed enterprise data and analytics platforms and cross-channel personalization
+  strategies using Adobe Experience Cloud.
+- Managed onshore/offshore delivery teams and served as client-facing lead, delivering
+  architecture workshops and executive presentations.
+
+Digital Analytics Strategist | Syntasa - Herndon, VA | November 2015 - February 2019
+- Defined business and technical requirements for tracking systems and Adobe Analytics
+  integrations across enterprise clients.
+- Implemented privacy-preserving data clean room architectures (Google Ads Data Hub,
+  BigQuery) to enable secure cross-platform audience collaboration and optimize
+  campaign performance.
+- Designed cross-channel personalization strategies, integrating audience data across
+  Adobe Marketing Cloud products for enhanced activation.
+- Managed onshore/offshore delivery teams and served as client-facing lead for
+  workshops and executive presentations.
+
+Additional Experience | Sept 2008 - Nov 2015
+Adobe India | Cognizant Technology Solutions & TCS | R&R Systems | Lionbridge Technologies
+- Progressed through Digital Analytics Engineer, Consultant/IT Analyst, and Technical
+  Lead roles, building foundational expertise in digital analytics platforms, enterprise
+  data integration, and global marketing-application support - establishing the
+  technical base for later CDP/MarTech specialization.
 
 EDUCATION
-- M.S., Computer Science - Data Science & Artificial Intelligence concentration (2008)
-- B.E., Computer Science (2006)
+- Forward Deployed Engineer (FDE) Master Program: GenAI, RAG, Agents & Enterprise AI
+  (In Progress; Expected Completion July 2026)
+- Chief Digital and AI Officer Program - Indian School of Business (ISB), Hyderabad, India
+- Post Graduate Program in Cloud Computing - The University of Texas at Austin
+- Product Strategy - Northwestern University, Kellogg School of Management
+- UBC Award of Achievement in Digital Analytics - University of British Columbia, Canada
+- Executive Master's in Management (Marketing & IT) - IIBM University, New Delhi
+- Bachelor of Technology, Computer Science & Engineering - BPUT, Odisha, India
+
+CERTIFICATIONS
+- Adobe Certified Expert - Real-Time CDP (Technical Architect, Business Practitioner,
+  Technical Sales)
+- Adobe Certified Expert - Adobe Journey Optimizer (AJO)
+- Adobe Certified - Analytics & Customer Journey Analytics (CJA)
+- AWS Certified Cloud Practitioner
+- Oracle Certified DBA

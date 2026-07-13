@@ -1,8 +1,9 @@
 # Amaresh Konchada — Portfolio Website
 
-A static, single-page professional portfolio for a Data & AI leader — built with
-plain HTML5, CSS3, and vanilla JavaScript, designed to be hosted for free on
-GitHub Pages. No frameworks, no build step.
+A static, single-page professional portfolio for an Enterprise Solution Architect
+(Adobe Experience Platform, Real-Time CDP, AJO) — built with plain HTML5, CSS3,
+and vanilla JavaScript, designed to be hosted for free on GitHub Pages. No
+frameworks, no build step.
 
 ## Sections
 
@@ -34,26 +35,20 @@ Professional Website/
 └── CLAUDE.md                Design & content spec for this project
 ```
 
-## Replacing the placeholder photo
+## Profile photo
 
-The hero section currently shows a generated monogram avatar
-(`images/profile-placeholder.svg`). To use a real photo:
-
-1. Add your headshot as `images/profile.jpg` (square, at least 500×500px looks best).
-2. In `index.html`, find the `<img ... class="hero__avatar">` tag inside
-   `<section id="hero">` and change `src="images/profile-placeholder.svg"` to
-   `src="images/profile.jpg"`.
+The hero section uses `images/profile.jpg` (square headshot, 560×560). To swap
+it, replace that file with a new square image of the same name.
 
 ## Customizing content
 
 Everything is hand-authored HTML — no CMS or data file. To update:
 
 - **Experience / Education**: edit the `#experience` / `#education` sections in
-  `index.html`. Employer names are currently generalized descriptors (e.g.
-  "Global Financial Services Enterprise") — swap in real company names when
-  ready to publish.
-- **Resume**: keep `resume/resume.html` and `resume/resume.txt` in sync with
-  the Experience/Certifications/Education sections. See
+  `index.html`.
+- **Resume**: keep `resume/resume.html`, `resume/resume.txt`, and
+  `resume/Amaresh_Konchada_Resume.pdf` in sync with the
+  Experience/Certifications/Education sections. See
   [`resume/README.md`](resume/README.md) for exporting a PDF.
 - **Projects, Certifications, Achievements**: each is a repeated `<article
   class="card ...">` block — copy/paste a block and edit its text to add more.
